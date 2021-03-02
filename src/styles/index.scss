@@ -1,0 +1,27 @@
+@import 'color';
+@import 'var';
+@import 'information/information';
+@import './footer/footer';
+
+* {margin: 0; padding: 0;}
+
+* {
+  font-family: 'Arial', serif;
+  font-style: normal;
+  box-sizing: border-box;
+
+
+  button,
+  button:active,
+  button:focus {
+    outline: none;
+  }
+}
+
+body {
+  background: #f9f9f9;
+  color: #3D3D3C;
+
+  ::-webkit-scrollbar { width:4px;}
+  ::-webkit-scrollbar-thumb { height: 4px; background-color: #D9D9D9; border-radius: 3px;}
+}
