@@ -8,13 +8,15 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
+// подумать
+// options: {
+// 	publicPath: path.resolve(__dirname, 'dist')
+// },
+
 const cssLoaders = (extra) => {
 	const loaders = [
 		{
 			loader: MiniCssExtractPlugin.loader,
-			options: {
-				publicPath: path.resolve(__dirname, 'dist')
-			},
 		},
 		'css-loader'
 	]
@@ -66,7 +68,7 @@ module.exports = {
 		new CleanWebpackPlugin(),
 
 		new MiniCssExtractPlugin({
-			filename: '[name][contenthash].css'
+			filename: '[name][hash].css'
 		})
 	],
 	optimization: optimization(),

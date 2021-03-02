@@ -3,7 +3,7 @@
 
   position: relative;
   z-index: 2;
-  margin-top: -10px;
+  //margin-top: -10px;
   color: $color-footer;
   .bg-footer {
     background-color: $bg-footer;
@@ -220,7 +220,7 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    margin-top: -130px;
+    //margin-top: -130px;
     .content {
       padding: 40px 0 50px 0;
     }

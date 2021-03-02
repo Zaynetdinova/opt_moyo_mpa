@@ -1,0 +1,107 @@
+@import 'components/more';
+@import './components/mobileSearch';
+@import './components/showRegistryUserDataView';
+@import './components/mobileSubMenu';
+.Header {
+  @import 'components/topHeader';
+  @import 'components/bottomHeader';
+  @import 'components/sidebar';
+  @import 'components/info-mobail';
+
+  .display-block {
+    display: block;
+  }
+
+  .wrap {
+    margin-left: 10.33px;
+  }
+
+  .text p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #3D3D3C;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: capitalize;
+
+    color: #3D3D3C;
+  }
+
+  @media (max-width: 1024px) {
+    .line-header {
+      display: none;
+    }
+    position: sticky;
+    top:0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+}
+
+
+// временное решение (переделать)
+.main-sub-category {
+  padding: 0 !important;
+
+  .sub-category-wrapper {
+    padding: 16px 32px 17px 27px;
+    border-bottom: 2px solid #F3F2F0;
+    cursor: pointer;
+    &:hover {
+      .item {
+        color: $burgundy;
+      }
+    }
+    .category {
+      .choice {
+        padding: 0 0 0 30px;
+      }
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 100%;
+
+      .sub-title {
+        font-size: 11px;
+        font-weight: normal;
+        color: #777777;
+      }
+    }
+
+    .sub-arrow {
+      transform: rotate(90deg);
+    }
+
+    .sub-category{
+      margin-top: 10px;
+      display: none;
+    }
+
+    &.show {
+      .sub-category {
+        display: block;
+      }
+
+      .arrow-transform-js {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .sub-category-wrapper:last-child {
+    border-bottom: none;
+  }
+}

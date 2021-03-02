@@ -1,0 +1,72 @@
+
+.More {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 40px 40px 30px;
+  height: 100vh;
+  overflow-y: scroll;
+  .wrap-col {
+    display: flex;
+    justify-content: space-between;
+  }
+  .first-col,
+  .second-col {
+    width: 210px;
+    margin-right: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    color: #3D3D3C;
+    max-width: 310px;
+  }
+  .intro {
+    padding: 22px 19px 39px 18px;
+    background: #F3F2F0;
+  }
+  .title-text {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18.5px;
+    text-transform: capitalize;
+    margin-bottom: 11px;
+    white-space: pre-wrap;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    white-space: pre-wrap;
+  }
+  .selection-second a {
+    color: #555555;
+  }
+  .selection-first a {
+    color: #9E9E9E;
+    &:hover {
+      color: #555555;
+    }
+  }
+  .selection-second a,
+  .selection-first a {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    line-height: 250%;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .wrap-col {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+
+

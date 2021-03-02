@@ -1,0 +1,85 @@
+.mobile-search-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.Mobile-search {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: $bg-search;
+  padding: 0 15px;
+  display: none;
+  z-index: 2;
+
+  .show-result {
+    display: none;
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #D9D9D9;
+    padding: 10px 0 8px;
+
+    .delete {
+      background: url("../assets/images/icons/plus.svg") no-repeat;
+      width: 24px;
+      height: 23px;
+      margin-right: 24px;
+      display: none;
+    }
+    .icon-search-mobail {
+      background: url("../assets/images/header/search.svg") no-repeat;
+      width: 32px;
+      height: 24px;
+      background-size: contain;
+      position: absolute;
+      right: -10px;
+    }
+
+    .search-mobail {
+      letter-spacing: 0.07em;
+      font-size: 13px;
+      line-height: 15px;
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 23px;
+    }
+
+    &.input-header-active {
+      .delete {
+        display: block;
+      }
+    }
+  }
+
+
+
+
+  .card-search {
+    display: flex;
+    padding: 10px 42px 10px 1px;
+    img {
+      width: 67px;
+      height: 100px;
+    }
+  }
+
+  .watch-all-result {
+    width: 100%;
+    display: inline-block;
+    padding: 49px 0 58px 0;
+    text-align: center;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #3D3D3C;
+  }
+}

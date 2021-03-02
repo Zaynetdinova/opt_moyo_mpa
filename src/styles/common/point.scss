@@ -1,0 +1,134 @@
+.points {
+  width: 350px;
+  min-width: 223px;
+  background: $bg-sidebar;
+  overflow-y: auto;
+  color: $color-555555;
+  .points-header {
+    padding-top: 26px;
+  }
+  .categories {
+    padding: 0 32px 26px 32px;
+    background: $baseColor;
+    display: none;
+    overflow-y: scroll;
+    max-height: 374px;
+    &.open {
+      display: block;
+    }
+  }
+  .open-category-js {
+    .categories {
+      display: block;
+      .category {
+        line-height: 40px;
+        border-bottom: 1px dashed $color-D9D9D9;
+      }
+    }
+    .plus {
+      span {
+        transform: rotate(-90deg);
+      }
+      span:after {
+        display: none;
+      }
+    }
+    .line-white {
+      display: none;
+    }
+  }
+  .point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px 9px 16px;
+    background: $bg-sidebar;
+    cursor: pointer;
+    &:hover {
+      .title {
+        color: $burgundy;
+      }
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    margin-left: 13px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .sidebar-img {
+    width: 28px;
+    height: 28px;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    color: $color-555555;
+  }
+  .plus {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    span:after {
+      content: '';
+      transform: rotate(-90deg);
+    }
+    span, span:after {
+      display: block;
+      width: 2px;
+      height: 10px;
+      background: $sidebar-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -1px;
+      margin-top: -5px;
+      transition: all 0.4s linear;
+    }
+  }
+  .line {
+    border-bottom: 2px dotted $color-D9D9D9;
+  }
+  a {
+    color: $color-555555;
+    text-decoration: none;
+  }
+  .choice {
+    padding: 0 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    .arrow {
+      //background: url("../images/icons/arrow2.svg") no-repeat;
+      width: 10px;
+      height: 10px;
+      display: none;
+    }
+    &:hover {
+      color: $burgundy;
+      cursor: pointer;
+      .arrow {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    .choice {
+      .arrow {
+        display: block;
+      }
+    }
+  }
+}

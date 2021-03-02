@@ -1,3 +1,5 @@
+import {sidebarPoint} from '../common/sidebar/sidebarPoint'
+
 export function footerTemplate() {
 	return `
      <footer>
@@ -5,7 +7,7 @@ export function footerTemplate() {
             <div class="footer-mobile-points-wrapper">
               <div class='points'>
                 <div class="points-footer">
-
+					${sidebarPoint(point, 'notArrow')}
                 </div>
               </div>
             </div>

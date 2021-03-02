@@ -1,0 +1,88 @@
+.mobile-header {
+  .burger-menu-wrapper {
+    height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .burger-menu {
+      cursor: pointer;
+      background-repeat: no-repeat;
+      margin-left: 20px;
+    }
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    height: 46px;
+    .buy-phone {
+      position: relative;
+    }
+    .quantity-basket-header {
+      position: absolute;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 13px;
+      color: #FFFFFF;
+      top: 3px;
+      right: 8px;
+    }
+  }
+  .icon-width {
+    display: block;
+    cursor: pointer;
+    .content {
+      background: none;
+    }
+  }
+  .content {
+    height: 100%;
+    padding: 0 14px;
+    background: #E7003E;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .wrapper-user-data-view {
+    display: none;
+    &.wrapper-user-data-view-show {
+      display: block;
+      position: absolute;
+      width: 100%;
+      z-index: 5;
+    }
+  }
+  .icon-img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (max-width: 1024px) {
+    .burger-menu-wrapper {
+      .burger-menu {
+        margin-left: 15px;
+      }
+    }
+    .buy-phone {
+      .content {
+        padding: 0 13.5px;
+      }
+      .icon-img {
+        width: 19px;
+        height: 18px;
+      }
+    }
+  }
+  @media (max-width: 374px) {
+    .content {
+      padding: 0 10px;
+    }
+    .icon-img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+

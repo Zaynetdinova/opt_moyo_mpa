@@ -1,0 +1,104 @@
+.bottomHeader {
+  @import "bottomHeaderDesktop";
+  @import "bottomHeaderMobile";
+  font-size: 13px;
+  color: $baseColor;
+  background: url("../assets/images/header/2600-80-bottom.jpg") no-repeat center;
+  background-size: cover;
+  .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+  }
+  .content-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 21.5px 0;
+  }
+  .wrapper-b {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .burger-logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .burger-menu {
+    margin-right: 30px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    background-image: url("../assets/images/header/burger.svg");
+    width: 20px;
+    height: 16px;
+  }
+  .show {
+    .burger-menu {
+      background-image: url("../assets/images/icons/cancel.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 53px;
+    &-img {
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+  .favorites {
+    margin-top: 2px;
+    margin-right: 25px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  @media (max-width: $width-1280) {
+    .burger-menu {
+      margin-right: 10px;
+    }
+    .logo {
+      margin-right: 30px;
+    }
+  }
+  @media (max-width: $tablet-breakpoint) {
+    background-image: url("../assets/images/header/1024-46.jpg");
+    .mobile-header {
+      display: block;
+    }
+    .desktop-header {
+      display: none;
+    }
+    .content-header nav {
+      display: none;
+    }
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+    .wrapper-b {
+      padding: 0;
+    }
+    .logo {
+      margin-right: 0;
+    }
+    .logo-img {
+      height: 27px;
+    }
+  }
+  @media (max-width: 414px) {
+    background-image: url("../assets/images/header/414-46.jpg");
+  }
+}
+
+// ????????
+.Com-display-block {
+  display: block !important;
+}
